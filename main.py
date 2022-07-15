@@ -4,8 +4,6 @@ from discord.ext import commands
 import asyncio
 import time
 
-# OTE1NzAwNzg3NjAxMTEzMTM4.GZYw2k.h_sD0f1tNzgiM7mA9x8KotAcsEycRAGs-vKPQ4
-
 print(f"Welcome to the KillaScript nuke tool")
 print(f"Made by HudsonH. ⁽ᵉᵈⁱᵗᵉᵈ⁾#7274")
 time.sleep(1)
