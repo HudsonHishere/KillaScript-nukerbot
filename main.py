@@ -206,7 +206,5 @@ class UI1():
                                           text="        confirm         ", command=startup)
     confirm.place(relx=0.1, rely=0.78)
 
-# ODk3MzU3NDk0Mjk1MzQ3MjIx.G7K_7b.yf7wJspE08N7jEFZKu-kSBrhxeEUbj9oc5tm4I
-
 
 UI.mainloop()
