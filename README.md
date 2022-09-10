@@ -5,6 +5,7 @@ discord nuker script, easy to use and causes a lot of damage!
 
 commands:
 *fun - main command, gives @everyone role admin, deletes emojis, channels and roles, creates spam channels and sends spam messages
+
 *AD - gives personal admin role to any user who runs it
 
 What can killascript do?
@@ -21,3 +22,4 @@ What can killascript do?
 more features may come soon!
 Enjoy ;)
 
+(Unfortunatley, pyinstaller is extremeley gay so i can't turn this into an exe. Biggest sad :(. )
