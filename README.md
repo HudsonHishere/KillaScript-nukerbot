@@ -1,7 +1,7 @@
 # KillaScript-nukerbot
 contact: HudsonH. ⁽ᵉᵈⁱᵗᵉᵈ⁾#7274
 
-discord nuker script, easy to use and causes a lot of damage!
+required imports: discord, customtkinter
 
 
 commands:
