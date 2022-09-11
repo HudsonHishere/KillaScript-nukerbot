@@ -1,4 +1,4 @@
-# KillaScript-nukerbot
+# KillaScript-nuke script
 contact: HudsonH. ⁽ᵉᵈⁱᵗᵉᵈ⁾#7274
 
 required imports: discord, customtkinter
