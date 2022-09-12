@@ -1,20 +1,19 @@
 # packages
 import discord
 from discord.ext import commands
-import customtkinter
+import tkinter as tk
 from tkinter import messagebox
+from PIL import ImageTk
 
 prefix = "*"
 
-customtkinter.set_appearance_mode("light")
 
-
-UI = customtkinter.CTk()
+UI = tk.Tk()
 UI.title("killascript | prefix: *")
 UI.iconbitmap("killaimage.ico")
 
 app_width = 500
-app_height = 400
+app_height = 550
 
 screenw = UI.winfo_screenwidth()
 screenh = UI.winfo_screenheight()
@@ -23,15 +22,18 @@ y = (screenh / 2) - (app_height / 2)
 
 UI.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
-main = customtkinter.CTkFrame(master=UI)
+main = tk.Frame(master=UI)
 main.pack(fill="both", expand=True)
+banner = ImageTk.PhotoImage(file="killaimagebanner.png")
+Line = ImageTk.PhotoImage(file="killaimageline.png")
+
 
 
 def startup():
     TKN: str = UI1.TOKE.get()
     NME: str = UI1.name.get()
     SPM: str = UI1.spmmsg.get()
-    SPC: str= UI1.spamc.get()
+    SPC: str = UI1.spamc.get()
 
     if TKN == "":
         messagebox.showinfo("killascript | prefix: *", "Please fill in all fields!")
@@ -54,11 +56,12 @@ def startup():
 
 
     messagebox.showinfo("killascript | prefix: *", "Everything is set, Please go to the terminal for further instruction")
+
     UI.destroy()
 
-    # intents = discord.Intents.all()
+    intents = discord.Intents.all()
     Bot = commands.Bot(command_prefix=prefix,
-                       help_command=None, intents=discord.Intents.all())
+                       help_command=None, intents=intents)
 
     @Bot.event
     async def on_ready():
@@ -155,56 +158,51 @@ def startup():
 
 class UI1():
 
-    # Labels
+    # images
 
-    req1 = customtkinter.CTkLabel(master=main,
-                                  text="Please fill in the following fields with correct information:",
-                                  text_font=("Arial", 10))
-    req1.place(relx=0.05, rely=0.2)
+    uibanner = tk.Label(master=main, image=banner, borderwidth=1)
+    uibanner.place(y=30)
 
-    chanlabel = customtkinter.CTkLabel(master=main,
-                                     text="Spam channel name", text_font=("Arial", 10))
-    chanlabel.place(relx=0.48, rely=0.7)
+    lne = tk.Label(master=main, image=Line, borderwidth=1)
+    lne.place(x=-70, y=150)
 
-    tokenlabel = customtkinter.CTkLabel(master=main,
-                                      text="Your Bot Token", text_font=("Arial", 10))
-    tokenlabel.place(relx=0.01, rely=0.3)
 
-    namelabel = customtkinter.CTkLabel(master=main,
-                                       text="Desired server name", text_font=("Arial", 10))
-    namelabel.place(relx=0.04, rely=0.5)
+    # labels
 
-    Titlelabel = customtkinter.CTkLabel(master=main,
-                                   text="KILLASCRIPT Nuke Tool", text_font=("Arial", 15))
-    Titlelabel.place(relx=0.05, rely=0.1)
+    spmlabel = tk.Label(master=main, text="Spam Message:", font=("Arial", 10))
+    spmlabel.place(x=14, y=180)
 
-    spmmsglabel = customtkinter.CTkLabel(master=main,
-                                     text="Spam message", text_font=("Arial", 10))
-    spmmsglabel.place(relx=0.455, rely=0.5)
 
-    # Entry fields
+    spclabel = tk.Label(master=main, text="Spam Channel:", font=("Arial", 10))
+    spclabel.place(x=269, y=180)
 
-    spamc = customtkinter.CTkEntry(UI, bg='lightgray',
-                                       placeholder_text="Enter Spam Channel Name", bg_color="light grey", borderwidth=2, width=200)
-    spamc.place(relx=0.5, rely=0.8)
+    TKNlabel = tk.Label(master=main, text="Bot Token:", font=("Arial", 10))
+    TKNlabel.place(x=14, y=380)
 
-    spmmsg = customtkinter.CTkEntry(UI, bg='lightgray',
-                                         placeholder_text="Enter Spam Message", bg_color="light grey",  borderwidth=2,width=200)
-    spmmsg.place(relx=0.5, rely=0.6)
+    sernmelabel = tk.Label(master=main, text="Rename Server:", font=("Arial", 10))
+    sernmelabel.place(x=14, y=280)
 
-    TOKE = customtkinter.CTkEntry(UI, bg='lightgray',
-                                       placeholder_text="Enter Bot Token", bg_color="light grey",  borderwidth=2, width=425)
-    TOKE.place(relx=0.05, rely=0.4)
 
-    name = customtkinter.CTkEntry(UI, bg='lightgray',
-                                      placeholder_text="Enter New Server Name", bg_color="light grey", borderwidth=2, width=200)
-    name.place(relx=0.05, rely=0.6)
+    # entry fields
 
-    # Buttons
+    spmmsg = tk.Entry(master=main, bg="light grey", borderwidth=2, width=35)
+    spmmsg.place(x=15, y=200)
 
-    confirm = customtkinter.CTkButton(UI, fg_color="#9CA39C", bg_color="light grey",
-                                          text="        confirm         ", command=startup)
-    confirm.place(relx=0.1, rely=0.78)
+    spamc = tk.Entry(master=main, bg="light grey", borderwidth=2, width=35)
+    spamc.place(x=270, y=200)
 
+    name = tk.Entry(master=main, bg="light grey", borderwidth=2, width=35)
+    name.place(x=15, y=300)
+
+    TOKE = tk.Entry(master=main, bg="light grey", borderwidth=2, width=70)
+    TOKE.place(x=15, y=400)
+
+
+    # buttons
+
+    confirmbut = tk.Button(master=main, bg="#cccccc", text="confirm", font=("Arial", 16), borderwidth=2, width=15, command=startup)
+    confirmbut.place(x=150, y=500)
+
+# ODk3MzU3NDk0Mjk1MzQ3MjIx.G3iAQ6.IK3e56tN8wnVWwXLU0u2oFZROVATVYHvL2Duv4
 
 UI.mainloop()
