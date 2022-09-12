@@ -66,6 +66,7 @@ def startup():
     @Bot.event
     async def on_ready():
         print(f"The console is now online for nuker: {Bot.user}")
+        print("Made by HudsonH. ⁽ᵉᵈⁱᵗᵉᵈ⁾#7274")
         print(f"Bot Prefix: {prefix}")
         print("---commands---")
         print(f"{prefix}fun - Nuke command")
