@@ -203,6 +203,4 @@ class UI1():
     confirmbut = tk.Button(master=main, bg="#cccccc", text="confirm", font=("Arial", 16), borderwidth=2, width=15, command=startup)
     confirmbut.place(x=150, y=500)
 
-# ODk3MzU3NDk0Mjk1MzQ3MjIx.G3iAQ6.IK3e56tN8wnVWwXLU0u2oFZROVATVYHvL2Duv4
-
 UI.mainloop()
