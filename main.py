@@ -3,14 +3,13 @@ import discord
 from discord.ext import commands
 import tkinter as tk
 from tkinter import messagebox
-from PIL import ImageTk
 
 prefix = "*"
-
-
 UI = tk.Tk()
 UI.title("killascript | prefix: *")
-UI.iconbitmap("killaimage.ico")
+UI.wm_iconbitmap(r"C:\Users\Oliver\OneDrive\Documents\pycharmprojects\Desktop\Killascript source-code\killaimage.ico")
+print("DO NOT CLOSE THIS TERMINAL")
+print("#----------------------------------------------#")
 
 app_width = 500
 app_height = 550
@@ -24,9 +23,6 @@ UI.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
 main = tk.Frame(master=UI)
 main.pack(fill="both", expand=True)
-banner = ImageTk.PhotoImage(file="killaimagebanner.png")
-Line = ImageTk.PhotoImage(file="killaimageline.png")
-
 
 
 def startup():
@@ -161,11 +157,11 @@ class UI1():
 
     # images
 
-    uibanner = tk.Label(master=main, image=banner, borderwidth=1)
-    uibanner.place(y=30)
+    uibanner = tk.Label(master=main, bg="#cccccc", text="  Killascript          ", borderwidth=1, font=("Arial", 50))
+    uibanner.place(y=45)
 
-    lne = tk.Label(master=main, image=Line, borderwidth=1)
-    lne.place(x=-70, y=150)
+    lne = tk.Label(master=main, bg="#cccccc", borderwidth=1, font=(10), width=300)
+    lne.place(y=450)
 
 
     # labels
@@ -203,5 +199,7 @@ class UI1():
 
     confirmbut = tk.Button(master=main, bg="#cccccc", text="confirm", font=("Arial", 16), borderwidth=2, width=15, command=startup)
     confirmbut.place(x=150, y=500)
+
+# OTE1NzAwNzg3NjAxMTEzMTM4.Gp3BWA.plWfBS57_bRRN9bABatKuqGQHTr6urhasGTTYg
 
 UI.mainloop()
