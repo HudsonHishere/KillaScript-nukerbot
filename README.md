@@ -1,7 +1,7 @@
 # KillaScript-nuke script
 contact: HudsonH. ⁽ᵉᵈⁱᵗᵉᵈ⁾#7274
 
-required imports: discord, customtkinter
+required imports: discord
 
 
 commands:
@@ -22,7 +22,6 @@ What can killascript do?
 - send spam messages
 - create private admin roles for you and friends
 
-more features may come soon!
+more features MAY come soon!
 Enjoy ;)
 
-(Unfortunatley, pyinstaller is extremeley gay so i can't turn this into an exe. Biggest sad :(. )
