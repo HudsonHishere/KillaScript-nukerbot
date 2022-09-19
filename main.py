@@ -7,7 +7,6 @@ from tkinter import messagebox
 prefix = "*"
 UI = tk.Tk()
 UI.title("killascript | prefix: *")
-UI.wm_iconbitmap(r"C:\Users\Oliver\OneDrive\Documents\pycharmprojects\Desktop\Killascript source-code\killaimage.ico")
 print("DO NOT CLOSE THIS TERMINAL")
 print("#----------------------------------------------#")
 
@@ -199,6 +198,6 @@ class UI1():
 
     confirmbut = tk.Button(master=main, bg="#cccccc", text="confirm", font=("Arial", 16), borderwidth=2, width=15, command=startup)
     confirmbut.place(x=150, y=500)
-
+ 
 
 UI.mainloop()
